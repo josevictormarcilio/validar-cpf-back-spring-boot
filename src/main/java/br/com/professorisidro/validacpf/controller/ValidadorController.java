@@ -16,7 +16,10 @@ public class ValidadorController {
 		if (Validador.isCPF(cpf)) {
 			return "{\"status\": \"valido\"}";
 		}
-		 return "{\"status\": \"invalido\"}";
+		return "{\"status\": \"invalido\"}";
 	}
-
+	@GetMapping("/")
+	public String index() {
+		return "{\"mensagem\": \"Bem vindo a API Turma 7B\"}";
+	}
 }
